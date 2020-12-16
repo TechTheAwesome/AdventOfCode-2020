@@ -1,7 +1,7 @@
 import itertools 
 
 #Import input as raw string array & converts to int
-inputs = open('./raw_input/input.txt',).read().split()
+inputs = open('../raw_input/input.txt',).read().split()
 i = 0
 while i < len(inputs):
     inputs[i] = int(inputs[i])

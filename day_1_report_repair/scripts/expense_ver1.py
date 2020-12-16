@@ -1,7 +1,7 @@
 import numpy
 
 #Import input as raw string array
-inputs = open('./raw_input/input.txt',).read().split()
+inputs = open('../raw_input/input.txt',).read().split()
 
 #sum value
 sum = 2020
