@@ -8,21 +8,26 @@ while i < len(inputs):
     i += 1
 
 #Solve
-tree = '#'
-open = '.'
-height = len(inputs) 
-width = len(inputs[0]) 
-answer = 0
-x = 0
-y = 1
-while y < height:
-    if x+3 > width - 1:
-        x -= width
-    x += 3
-    #print(x,y,width, height)
-    if inputs[y][x] == tree:
-        answer += 1
-    y +=1
+def Solve(right, down):
+    tree = '#'
+    height = len(inputs)
+    width = len(inputs[0])
+    modHeight = height % down
+    modWidth = height % right
+    x = right
+    y = down
+    answer = 0
+    while y < height:
+        if inputs[y][x] == tree:
+            answer += 1
+        if x+right > width -1:
+            x -= width
+        y += down
+        x += right
 
+    print(answer)
+    return answer
 
-print(answer)
+print(
+    Solve(1,1) * Solve(3,1) * Solve(5,1) * Solve(7,1) * Solve(1,2)
+)
